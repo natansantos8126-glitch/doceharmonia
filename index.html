@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doce Harmonia Confeitaria | Doces Artesanais Gourmet</title>
+    <meta name="description" content="Doce Harmonia: doces artesanais gourmet para festas e eventos. Ingredientes premium, 100% artesanal. Encomende agora!">
+    <meta name="keywords" content="doces gourmet, confeitaria, brigadeiros, doces personalizados, Valparaíso DF">
+    
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="Doce Harmonia Confeitaria">
+    <meta property="og:description" content="Doces artesanais que transformam momentos em memórias inesquecíveis.">
+    <meta property="og:image" content="Logo/logo.jpg.jpg">
+    <meta property="og:url" content="https://doceharmonia.com">
+    
+    <!-- Fonte Moderna do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== ESTILOS GERAIS ===== */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FAEDE3; 
+            color: #4A2E1B;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* ===== CABEÇALHO ===== */
+        header {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #F2A68D 0%, #D97D64 100%);
+            border-bottom: 4px solid #7D3E24;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 25px rgba(74, 46, 27, 0.3);
+            border: 4px solid #FFFDF9;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .slogan {
+            font-size: 20px;
+            color: #FFFDF9; 
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        /* ===== NAVEGAÇÃO FLUTUANTE ===== */
+        .nav-float {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 10px 25px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .nav-float.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #7D3E24;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #D97D64;
+        }
+
+        /* ===== CONTAINER E TÍTULOS ===== */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #7D3E24; 
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            width: 70px;
+            height: 5px;
+            background-color: #D97D64; 
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .subtitle {
+            color: #9D5A3D;
+            font-size: 18px;
+            margin-bottom: 40px;
+            margin-top: 20px;
+            font-weight: 300;
+        }
+
+        /* ===== SESSÃO SOBRE NÓS ===== */
+        .about-section {
+            background-color: #ffffff;
+            padding: 50px 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(217, 125, 100, 0.15);
+            margin-bottom: 80px;
+            border: 3px solid #F5D6C6;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-text {
+            font-size: 18px;
+            color: #5C3A21;
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            line-height: 1.8;
+        }
+
+        .highlights {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: #FDF1EB;
+            color: #D97D64;
+            border: 2px solid #F2A68D;
+            padding: 15px 25px;
+            border-radius: 35px;
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .tag:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(217, 125, 100, 0.2);
+        }
+
+        /* ===== GALERIA DE FOTOS MELHORADA ===== */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 12px 30px rgba(125, 62, 36, 0.15);
+            transition: all 0.4s ease;
+            text-decoration: none;
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.6s; }
+        .gallery-item:nth-child(7) { animation-delay: 0.7s; }
+        .gallery-item:nth-child(8) { animation-delay: 0.8s; }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(125, 62, 36, 0.3);
+            border-color: #F2A68D;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(125, 62, 36, 0.85), rgba(217, 125, 100, 0.8));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .overlay span {
+            color: #FFFDF9;
+            font-size: 22px;
+            font-weight: 700;
+            border: 3px solid #FFFDF9;
+            padding: 15px 30px;
+            border-radius: 35px;
+            letter-spacing: 1.5px;
+            transform: translateY(30px);
+            transition: all 0.4s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:hover .overlay span {
+            transform: translateY(0);
+        }
+
+        /* Modal para imagens */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            animation: modalFade 0.3s ease;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            cursor: pointer;
+        }
+
+        @keyframes modalFade {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        /* ===== TABELA DE PREÇOS MELHORADA ===== */
+        .pricing-section {
+            margin-bottom: 80px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pricing-card {
+            background: linear-gradient(145deg, #ffffff, #FDF1EB);
+            border: 3px solid #F5D6C6;
+            border-top: 8px solid #D97D64; 
+            border-radius: 20px;
+            padding: 40px 25px;
+            box-shadow: 0 10px 30px rgba(217, 125, 100, 0.15);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #F2A68D, #D97D64);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px rgba(217, 125, 100, 0.25);
+            border-color: #D97D64;
+        }
+
+        .pricing-card h3 {
+            margin-top: 0;
+            color: #7D3E24;
+            font-size: 26px;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dashed #EFC1B0;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+
+        .price-item:hover {
+            background: rgba(242, 166, 141, 0.1);
+            border-radius: 10px;
+            padding-left: 10px;
+            margin: 0 -10px;
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .price-item span:first-child {
+            color: #6D4B32;
+            font-weight: 500;
+        }
+
+        .price-item span:last-child {
+            font-weight: 800;
+            color: #D97D64; 
+            font-size: 20px;
+        }
+
+        /* ===== FORMULÁRIO DE CONTATO ===== */
+        .contact-section {
+            background: linear-gradient(135deg, #ffffff 0%, #FDF1EB 100%);
+            padding: 60px 40px;
+            border-radius: 25px;
+            margin-bottom: 80px;
+            box-shadow: 0 15px 40px rgba(217, 125, 100, 0.15);
+            border: 3px solid #F5D6C6;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            color: #7D3E24;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #F5D6C6;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            background: #FFFDF9;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #D97D64;
+            box-shadow: 0 0 0 3px rgba(217, 125, 100, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #D97D64, #F2A68D);
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 8px 20px rgba(217, 125, 100, 0.3);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(217, 125, 100, 0.4);
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            background: linear-gradient(135deg, #3D2616 0%, #2A1A10 100%);
+            color: #FFFDF9;
+            padding: 60px 20px 40px;
+            border-top: 6px solid #D97D64;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #F2A68D, transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #F2A68D;
+        }
+
+        footer p {
+            margin: 12px 0;
+            font-size: 16px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 35px;
+            font-weight: 700;
+            transition: transform 0.3s;
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.3);
+            font-size: 16px;
+        }
+
+        .btn-social:hover {
+            transform: scale(1.08) translateY(-2px);
+        }
+
+        /* ===== BOTÃO WHATSAPP FLUTUANTE MELHORADO ===== */
+        .btn-wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border-radius: 50px;
+            padding: 18px 28px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: waPulse 2s infinite;
+        }
+
+        .btn-wa-float:hover {
+            transform: scale(1.08) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes waPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* ===== RESPONSIVO MELHORADO ===== */
+        @media (max-width: 768px) {
+            .nav-float { padding: 8px 15px; }
+            .nav-links { gap: 15px; font-size: 14px; }
+            h2 { font-size: 28px; }
+            .about-section, .contact-section { padding: 40px 20px; }
+            .gallery { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+            .gallery img { height: 220px; }
+            .form-row { grid-template-columns: 1fr; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .highlights { flex-direction: column; align-items: center; gap: 15px; }
+            .tag { font-size: 14px; padding: 12px 20px; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .btn-wa-float { padding: 15px 20px; bottom: 20px; right: 20px; font-size: 14px; }
+            .btn-wa-float span { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .gallery { grid-template-columns: 1fr; }
+            .gallery img { height: 250px; }
+        }
+
+        /* ===== CARREGAMENTO ===== */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #FAEDE3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #F2A68D;
+            border-top: 4px solid #D97D64;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to top */
+        .scroll-top {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            background: #D97D64;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Nav Flutuante -->
+    <nav class="nav-float" id="navFloat">
+        <ul class="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#pricing">Preços</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- CABEÇALHO -->
+    <header id="home">
+        <img src="Logo/logo.jpg.jpg" alt="Logo Doce Harmonia Confeitaria - Doces Artesanais" class="logo" loading="eager">
+        <div class="slogan">Mais do que doces, criamos sentimentos.</div>
+    </header>
+
+    <main class="container">
+        
+        <!-- SESSÃO SOBRE NÓS -->
+        <section id="about" class="about-section">
+            <h2>Nossa Essência</h2>
+            <p class="about-text">
+                A <strong>Doce Harmonia</strong> nasceu do desejo de transformar momentos simples em experiências inesquecíveis. Somos especialistas em doces artesanais, feitos com ingredientes selecionados e muito carinho para adoçar suas comemorações. Trabalhamos de forma personalizada para que cada pedido seja único, levando um toque de felicidade para o seu evento. Cada doce é uma obra de arte comestível!
+            </p>
+            
+            <div class="highlights">
+                <div class="tag">🍫 Ingredientes Premium</div>
+                <div class="tag">👐 100% Artesanal</div>
+                <div class="tag">💖 Feito com Amor</div>
+                <div class="tag">🎉 Eventos Personalizados</div>
+            </div>
+        </section>
+
+        <!-- SESSÃO DE FOTOS -->
+        <section id="portfolio">
+            <h2>Nosso Portfólio</h2>
+            <p class="subtitle">Um pouco das nossas criações para encantar seus olhos e paladar.</p>
+            
+            <div class="gallery">
+                <a href="imagens/1.jpeg" class="gallery-item" data-modal-img="imagens/1.jpeg">
+                    <img src="imagens/1.jpeg" alt="Brigadeiro Gourmet Doce Harmonia" loading="lazy">
+                    <div class="overlay"><span>Saiba mais</span></div>
+                </a>
+                <a href="imagens/2.jpeg" class="gallery-item" data-modal-img="imagens/2.jpeg">
+                    <img src="imagens/2.jpeg" alt="Doces Finos Personalizados" loading="lazy">
+                    <div class="overlay"><span>Saiba mais</span></div>
+                </a>
+                <a href="imagens/3.jpeg" class="gallery-item" data-modal-img="imagens/3.jpeg">
+                    <img src="imagens/3.jpeg" alt="Brigadeiros Gourmet com Carimbo" loading="lazy">
+                    <div class="overlay"><span>Saiba mais</span></div>
+                </a>
+                <a href="imagens/4.jpeg" class="gallery-item" data-modal-img="imagens/4.jpeg">
+                    <img src="imagens/4.jpeg" alt="Doces para Festas" loading="lazy">
+                    <div class="overlay"><span>Saiba mais</span></div>
+                </a>
+                <a href="imagens/5.jpeg" class="gallery-item" data-modal-img="imagens/5.jpeg">
+                    <img src="imagens/5.jpeg" alt="Doces Artesanais Premium" loading="lazy">
+                    <div class="overlay"><span>Saiba mais</span></div>
+                </a>
+                <a href="imagens/6.jpeg" class="gallery-item" data-modal-img="imagens/6.jpeg">
+                    <img src="imagens/6.jpeg" alt="Brigadeiros Finos" loading="lazy">
+                    <div class="overlay"><span>Saiba mais</span></div>
+                </a>
+                <a href="imagens/7.jpeg" class="gallery-item" data-modal-img="imagens/7.jpeg">
+                    <img src="imagens/7.jpeg" alt="Doces Personalizados" loading="lazy">
+                    <div class="overlay"><span>Saiba mais</span></div>
+                </a>
+                <a href="imagens/8.jpeg" class="gallery-item" data-modal-img="imagens/8.jpeg">
+                    <img src="imagens/8.jpeg" alt="Mesa de Doces Completa" loading="lazy">
+                    <div class="overlay"><span>Saiba mais</span></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- SESSÃO DE PREÇOS -->
+        <section id="pricing" class="pricing-section">
+            <h2>Menu de Valores</h2>
+            <p class="subtitle">Opções perfeitas para festas, presentes e confraternizações. Preços por quilo ou quantidade.</p>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>🍫 Tradicional</h3>
+                    <div class="price-item">
+                        <span>50 unidades</span>
+                        <span>R$ 70,00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>100 unidades</span>
+                        <span>R$ 140,00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>200+ unidades</span>
+                        <span>R$ 1,30/un</span>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>🌟 Gourmet</h3>
+                    <div class="price-item">
+                        <span>50 unidades</span>
+                        <span>R$ 90,00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>100 unidades</span>
+                        <span>R$ 180,00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>200+ unidades</span>
+                        <span>R$ 1,70/un</span>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>🎨 Personalizado</h3>
+                    <div class="price-item">
+                        <span>25 unidades</span>
+                        <span>R$ 65,00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>50 unidades</span>
+                        <span>R$ 130,00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>100 unidades</span>
+                        <span>R$ 260,00</span>
+                    </div>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>🔖 Carimbo</h3>
+                    <div class="price-item">
+                        <span>25 unidades</span>
+                        <span>R$ 55,00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>50 unidades</span>
+                        <span>R$ 110,00</span>
+                    </div>
+                    <div class="price-item">
+                        <span>100 unidades</span>
+                        <span>R$ 220,00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE CONTATO -->
+        <section id="contact" class="contact-section">
+            <h2>Faça sua Encomenda</h2>
+            <p class="subtitle">Preencha o formulário ou envie mensagem pelo WhatsApp. Responderemos em até 2 horas!</p>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">WhatsApp *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail (opcional)</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="event">Tipo de Evento</label>
+                    <select id="event" name="event">
+                        <option value="">Selecione...</option>
+                        <option value="aniversario">Aniversário</option>
+                        <option value="casamento">Casamento</option>
+                        <option value="chaleira">Chá de Bebê/Revelação</option>
+                        <option value="corporativo">Corporativo</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Detalhes do Pedido *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Quantidade, sabores preferidos, data do evento..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">📩 Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Doce Harmonia</h3>
+                <p>📍 Valparaíso e Entorno do DF</p>
+                <p>🕒 Segunda a Sábado | 8h às 20h</p>
+                <p>Adoçando a vida como ela deve ser! 💕</p>
+            </div>
+            <div>
+                <h3>Contato Rápido</h3>
+                <p>📱 WhatsApp: (61) 99304-7135</p>
+                <a href="https://api.whatsapp.com/send?phone=5561993047135" class="btn-social">
+                    💬 Falar no WhatsApp
+                </a>
+            </div>
+            <div>
+                <h3>Siga-nos</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/doce_harmoniagourmet/" class="btn-social" target="_blank">
+                        📸 Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <a href="https://api.whatsapp.com/send?phone=5561993047135&text=Olá! Vim do site da Doce Harmonia e gostaria de fazer um pedido." target="_blank" class="btn-wa-float">
+        📱 <span>Peça Agora</span>
+    </a>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" title="Voltar ao topo">↑</button>
+
+    <!-- Modal para Imagens -->
+    <div id="imageModal" class="modal">
+        <img class="modal-content" id="modalImg">
+        <div style="position: absolute; top: 20px; right: 30px; color: white; font-size: 30px; cursor: pointer;" onclick="closeModal()">&times;</div>
+    </div>
+
+    <script>
+        // Loader
+        window.addEventListener('load', () => {
+            document.getElementById('loader').classList.add('hidden');
+        });
+
+        // Nav flutuante
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navFloat');
+            if (window.scrollY > 200) {
+                nav.classList.add('show');
+            } else {
+                nav.classList.remove('show');
+            }
+            lastScroll = window.scrollY;
+        });
+
+        // Smooth scroll para nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Modal para imagens da galeria
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                const imgSrc = item.dataset.modalImg || item.querySelector('img').src;
+                modal.style.display = 'block';
+                modalImg.src = imgSrc;
+            });
+        });
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Formulário de contato com WhatsApp
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const clientPhone = document.getElementById('phone').value;
+    const eventType = document.getElementById('event').value;
+    const message = document.getElementById('message').value;
+
+    let whatsappMsg = `Olá! *${name}* vim do site da Doce Harmonia.\n\n`;
+    whatsappMsg += `*Telefone do cliente:* ${clientPhone}\n`;
+    whatsappMsg += `*Evento:* ${eventType || 'Não especificado'}\n`;
+    whatsappMsg += `*Mensagem:* ${message}\n\n`;
+    whatsappMsg += `Aguardo retorno! 😊`;
+
+    // 🔥 SEU NÚMERO FIXO (PRINCIPAL)
+    const businessPhone = '5561993047135';
+
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${businessPhone}&text=${encodeURIComponent(whatsappMsg)}`;
+    
+    window.open(whatsappUrl, '_blank');
+
+    this.reset();
+
+    // Feedback visual
+    const btn = this.querySelector('.btn-submit');
+    const originalText = btn.textContent;
+    btn.textContent = '✅ Mensagem enviada!';
+    btn.style.background = '#25D366';
+
+    setTimeout(() => {
+        btn.textContent = originalText;
+        btn.style.background = '';
+    }, 3000);
+});
+</script>            
+            // Feedback visual
+            const btn = this.querySelector('.btn-submit');
+            const originalText = btn.textContent;
+            btn.textContent = '✅ Mensagem enviada!';
+            btn.style.background = '#25D366';
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.style.background = '';
+            }, 3000);
+        });
+
+        // Scroll to top
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Animações ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.about-section, .pricing-card, .contact-section').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Pré-carregamento de imagens críticas
+        if ('loading' in HTMLImageElement.prototype) {
+            // Lazy loading nativo suportado
+        } else {
+            // Fallback para lazy loading
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                img.src = img.dataset.src || img.src;
+            });
+        }
+
+        // Performance: Remove listener após uso
+        window.addEventListener('resize', () => {}, { passive: true });
+    </script>
+</body>
+</html>
